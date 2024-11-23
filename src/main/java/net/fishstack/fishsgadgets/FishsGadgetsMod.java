@@ -1,6 +1,7 @@
 package net.fishstack.fishsgadgets;
 
 import com.mojang.logging.LogUtils;
+import net.fishstack.fishsgadgets.block.ModBlocks;
 import net.fishstack.fishsgadgets.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,7 @@ public class FishsGadgetsMod {
 
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -42,6 +44,10 @@ public class FishsGadgetsMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.WAND);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.TUNGSTEEN_CUBE);
         }
     }
 
