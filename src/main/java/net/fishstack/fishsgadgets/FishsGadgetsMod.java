@@ -2,6 +2,7 @@ package net.fishstack.fishsgadgets;
 
 import com.mojang.logging.LogUtils;
 import net.fishstack.fishsgadgets.block.ModBlocks;
+import net.fishstack.fishsgadgets.item.ModCreativeModeTabs;
 import net.fishstack.fishsgadgets.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,6 +27,7 @@ public class FishsGadgetsMod {
     public FishsGadgetsMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

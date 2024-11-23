@@ -13,6 +13,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> WAND = ITEMS.register("wand",
             () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> FISH_INGOT = ITEMS.register("fish_ingot",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> FISH_PICKAXE = ITEMS.register("fish_pickaxe",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {

@@ -1,5 +1,9 @@
 {
   "item.fishsgadgets.wand": "Wand",
+  "item.fishsgadgets.fish_ingot": "Fish Ingot",
+  "item.fishsgadgets.fish_pickaxe": "Fish Pickaxe",
 
-  "block.fishsgadgets.tungsteen_cube": "Tungsteen Cube"
+  "block.fishsgadgets.tungsteen_cube": "Tungsteen Cube",
+
+  "creativetab.fishsgadgetstab": "Fishs Gadgets"
 }
