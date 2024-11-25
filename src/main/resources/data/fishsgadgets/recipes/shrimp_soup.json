@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "KSK",
+    " b "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:beetroot"
+    },
+    "K": {
+      "item": "minecraft:kelp"
+    },
+    "S": {
+      "item": "fishsgadgets:cooked_shrimp"
+    },
+    "b": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "fishsgadgets:shrimp_soup"
+  }
+}
