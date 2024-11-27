@@ -2,6 +2,7 @@ package net.fishstack.fishsgadgets.item;
 
 import net.fishstack.fishsgadgets.FishsGadgetsMod;
 import net.fishstack.fishsgadgets.item.custom.WandItem;
+import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,7 +29,7 @@ public class ModItems {
     public static final RegistryObject<Item> SHRIMP_SUSHI = ITEMS.register("shrimp_sushi",
             () -> new Item(new Item.Properties().food(ModFoodProperties.SHRIMP_SUSHI)));
     public static final RegistryObject<Item> SHRIMP_SOUP = ITEMS.register("shrimp_soup",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.SHRIMP_SOUP)));
+            () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoodProperties.SHRIMP_SOUP)));
 
 
     public static void register(IEventBus eventBus) {
