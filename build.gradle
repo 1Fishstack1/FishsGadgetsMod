@@ -18,6 +18,13 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
+
+
+
 version = mod_version
 group = mod_group_id
 
@@ -150,7 +157,9 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
 
-    implementation fg.deobf("team.lodestar.lodestone:lodestone:${minecraft_version}-${lodestone_version}")
+    implementation fg.deobf("team.lodestar.lodestone:lodestone:${minecraft_version}-${lodestone_version}") {
+        transitive = false
+    }
     //1.18.2 Example: implementation fg.deobf("team.lodestar.lodestone:lodestone:1.18.2-1.4.1.435")
     //1.19.2 Example: implementation fg.deobf("team.lodestar.lodestone:lodestone:1.19.2-1.4.2.83")
     //1.20.1 Example: implementation fg.deobf("team.lodestar.lodestone:lodestone:1.20.1-1.4.2.62")
